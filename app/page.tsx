@@ -1,4 +1,3 @@
-import Header from "@/components/common/Header";
 import {
   TypographyH1,
   TypographyH2,
@@ -14,7 +13,6 @@ import {
 export default function Home() {
   return (
     <>
-      <Header />
       <main className="max-w-4xl mx-auto p-8 space-y-8">
         {/* Hero Section */}
         <section className="space-y-4">
