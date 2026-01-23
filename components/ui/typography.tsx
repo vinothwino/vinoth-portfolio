@@ -7,6 +7,23 @@ import { cn } from "@/lib/utils"
 interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode
   className?: string
+  color?: "primary" | "secondary" | "muted"
+}
+
+/**
+ * Get color class based on color prop
+ */
+const getColorClass = (color?: "primary" | "secondary" | "muted") => {
+  switch (color) {
+    case "primary":
+      return "text-[var(--color-text-primary)]"
+    case "secondary":
+      return "text-[var(--color-text-secondary)]"
+    case "muted":
+      return "text-[var(--color-text-muted)]"
+    default:
+      return ""
+  }
 }
 
 /**
@@ -19,11 +36,12 @@ interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
  * @example
  * <TypographyH1>Vinoth Kumar</TypographyH1>
  */
-export function TypographyH1({ children, className, ...props }: TypographyProps) {
+export function TypographyH1({ children, className, color, ...props }: TypographyProps) {
   return (
     <h1
       className={cn(
         "text-[56px] font-bold leading-[1.1] tracking-[-0.02em]",
+        getColorClass(color),
         className
       )}
       {...props}
@@ -42,11 +60,12 @@ export function TypographyH1({ children, className, ...props }: TypographyProps)
  * @example
  * <TypographyH2>Full Stack Developer</TypographyH2>
  */
-export function TypographyH2({ children, className, ...props }: TypographyProps) {
+export function TypographyH2({ children, className, color, ...props }: TypographyProps) {
   return (
     <h2
       className={cn(
         "text-[36px] font-bold leading-[1.2]",
+        getColorClass(color),
         className
       )}
       {...props}
@@ -65,11 +84,12 @@ export function TypographyH2({ children, className, ...props }: TypographyProps)
  * @example
  * <TypographyH3>About Me</TypographyH3>
  */
-export function TypographyH3({ children, className, ...props }: TypographyProps) {
+export function TypographyH3({ children, className, color, ...props }: TypographyProps) {
   return (
     <h3
       className={cn(
         "text-[24px] font-semibold leading-[1.3]",
+        getColorClass(color),
         className
       )}
       {...props}
@@ -88,11 +108,12 @@ export function TypographyH3({ children, className, ...props }: TypographyProps)
  * @example
  * <TypographyH4>My Skills</TypographyH4>
  */
-export function TypographyH4({ children, className, ...props }: TypographyProps) {
+export function TypographyH4({ children, className, color, ...props }: TypographyProps) {
   return (
     <h4
       className={cn(
         "text-[18px] font-semibold leading-[1.4]",
+        getColorClass(color),
         className
       )}
       {...props}
@@ -112,11 +133,12 @@ export function TypographyH4({ children, className, ...props }: TypographyProps)
  * @example
  * <TypographyP>I'm a passionate developer with experience in...</TypographyP>
  */
-export function TypographyP({ children, className, ...props }: TypographyProps) {
+export function TypographyP({ children, className, color = "secondary", ...props }: TypographyProps) {
   return (
     <p
       className={cn(
-        "text-[16px] leading-[1.7] text-[var(--color-text-secondary)]",
+        "text-[16px] leading-[1.7]",
+        getColorClass(color),
         className
       )}
       {...props}
@@ -136,11 +158,12 @@ export function TypographyP({ children, className, ...props }: TypographyProps) 
  * @example
  * <TypographySmall>Last updated: Jan 2026</TypographySmall>
  */
-export function TypographySmall({ children, className, ...props }: TypographyProps) {
+export function TypographySmall({ children, className, color = "muted", ...props }: TypographyProps) {
   return (
     <small
       className={cn(
-        "text-[14px] leading-[1.6] text-[var(--color-text-muted)]",
+        "text-[14px] leading-[1.6]",
+        getColorClass(color),
         className
       )}
       {...props}
@@ -160,11 +183,12 @@ export function TypographySmall({ children, className, ...props }: TypographyPro
  * @example
  * <TypographyLabel>Contact</TypographyLabel>
  */
-export function TypographyLabel({ children, className, ...props }: TypographyProps) {
+export function TypographyLabel({ children, className, color, ...props }: TypographyProps) {
   return (
     <span
       className={cn(
         "text-[14px] font-medium tracking-[0.08em] uppercase",
+        getColorClass(color),
         className
       )}
       {...props}
@@ -187,7 +211,7 @@ export function TypographyLabel({ children, className, ...props }: TypographyPro
  * <TypographySectionLabel>SKILLS</TypographySectionLabel>
  * <TypographySectionLabel>PROJECTS</TypographySectionLabel>
  */
-export function TypographySectionLabel({ children, className, ...props }: TypographyProps) {
+export function TypographySectionLabel({ children, className, color = "muted", ...props }: TypographyProps) {
   return (
     <div
       className={cn(
@@ -196,7 +220,10 @@ export function TypographySectionLabel({ children, className, ...props }: Typogr
       )}
       {...props}
     >
-      <span className="text-[14px] font-semibold tracking-[0.12em] text-[var(--color-text-muted)] whitespace-nowrap">
+      <span className={cn(
+        "text-[14px] font-semibold tracking-[0.12em] whitespace-nowrap",
+        getColorClass(color)
+      )}>
         {children}
       </span>
       <div className="h-[1px] flex-1 bg-[var(--color-border-light)]" />
@@ -214,11 +241,12 @@ export function TypographySectionLabel({ children, className, ...props }: Typogr
  *   I have <TypographyHighlight>5+ years</TypographyHighlight> of experience
  * </TypographyP>
  */
-export function TypographyHighlight({ children, className, ...props }: TypographyProps) {
+export function TypographyHighlight({ children, className, color = "primary", ...props }: TypographyProps) {
   return (
     <span
       className={cn(
-        "font-semibold text-[var(--color-text-primary)]",
+        "font-semibold",
+        getColorClass(color),
         className
       )}
       {...props}
