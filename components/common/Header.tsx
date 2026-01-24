@@ -23,7 +23,7 @@ export default function Header() {
                 <div className="flex items-center justify-between">
                     {/* Left: Branding */}
                     <div className="flex flex-col">
-                        <TypographyH3 color="primary" className="">
+                        <TypographyH3 color="primary" className="sans-serif">
                             Vinoth Kumar
                         </TypographyH3>
                         <TypographySmall color="muted">
