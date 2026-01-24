@@ -8,7 +8,7 @@ import { TypographyH1, TypographyLabelWithDashes, TypographyP } from "./ui/typog
 export function HomeBanner() {
     return (
         <section id="home" className="bg-background">
-            <div className="container mx-auto max-w-5xl px-6 py-20 md:py-40 lg:py-50">
+            <div className="container mx-auto max-w-5xl px-6 py-20 md:py-40 lg:py-55">
                 <div className="flex flex-col md:flex-row gap-5">
                     <div className="flex flex-col flex-grow gap-6">
 

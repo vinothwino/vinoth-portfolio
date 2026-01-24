@@ -3,15 +3,26 @@ import { ExperienceSection } from "@/components/experienceSection/ExperienceSect
 import { HomeBanner } from "@/components/HomeBanner";
 import { ProjectSection } from "@/components/projectsSection/ProjectSection";
 import { SkillSection } from "@/components/skillsSection/SkillSection";
+import FadeInSection from "@/components/common/FadeInSection";
 
 export default function Home() {
   return (
     <>
-      <HomeBanner />
-      <AboutSection />
-      <SkillSection />
-      <ProjectSection />
-      <ExperienceSection />
+      <FadeInSection>
+        <HomeBanner />
+      </FadeInSection>
+      <FadeInSection delay={0.05}>
+        <AboutSection />
+      </FadeInSection>
+      <FadeInSection delay={0.1}>
+        <SkillSection />
+      </FadeInSection>
+      <FadeInSection delay={0.15}>
+        <ProjectSection />
+      </FadeInSection>
+      <FadeInSection delay={0.2}>
+        <ExperienceSection />
+      </FadeInSection>
     </>
   );
 }
