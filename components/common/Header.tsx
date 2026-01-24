@@ -25,6 +25,25 @@ const NAV_LINKS = [
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
 
+    const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        const targetId = href.replace('#', '')
+        const element = document.getElementById(targetId)
+        
+        if (element) {
+            const headerOffset = 80 // Height of sticky header
+            const elementPosition = element.getBoundingClientRect().top
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            })
+        }
+        
+        setIsOpen(false)
+    }
+
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background shadow-sm">
             <div className="container mx-auto max-w-7xl px-6 py-4">
@@ -45,7 +64,9 @@ export default function Header() {
                             {NAV_LINKS.map((link) => (
                                 <NavigationMenuItem key={link.href}>
                                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                        <Link href={link.href}>{link.label}</Link>
+                                        <Link href={link.href} onClick={(e) => handleNavClick(link.href, e)}>
+                                            {link.label}
+                                        </Link>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                             ))}
@@ -67,7 +88,7 @@ export default function Header() {
                                     {NAV_LINKS.map((link) => (
                                         <NavigationMenuItem key={link.href}>
                                             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                                <Link href={link.href} onClick={() => setIsOpen(false)}>
+                                                <Link href={link.href} onClick={(e) => handleNavClick(link.href, e)}>
                                                     {link.label}
                                                 </Link>
                                             </NavigationMenuLink>

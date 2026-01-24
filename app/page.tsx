@@ -1,4 +1,4 @@
-import AboutSection from "@/components/AboutSection";
+import AboutSection from "@/components/aboutSection/AboutSection";
 import { HomeBanner } from "@/components/HomeBanner";
 
 export default function Home() {

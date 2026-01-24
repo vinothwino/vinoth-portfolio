@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import {
   NavigationMenu,
@@ -16,6 +18,23 @@ const NAV_LINKS = [
 ] as const
 
 export default function Footer() {
+  const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const targetId = href.replace('#', '')
+    const element = document.getElementById(targetId)
+    
+    if (element) {
+      const headerOffset = 80 // Height of sticky header
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+
   return (
     <footer className="w-full border-t bg-secondary">
       <div className="container mx-auto max-w-7xl px-6 py-3">
@@ -35,6 +54,7 @@ export default function Footer() {
                   <NavigationMenuLink asChild>
                     <Link
                       href={link.href}
+                      onClick={(e) => handleNavClick(link.href, e)}
                       className="text-xs md:text-sm font-normal text-muted-foreground transition-colors hover:text-primary"
                     >
                       {link.label}
