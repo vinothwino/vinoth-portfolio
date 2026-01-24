@@ -1,4 +1,6 @@
-import { ArrowRightIcon, GithubIcon, LinkedinIcon, Mail } from "lucide-react";
+"use client";
+
+import { ArrowRightIcon, Download, GithubIcon, LinkedinIcon, Mail } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { TypographyH1, TypographyLabelWithDashes, TypographyP } from "./ui/typography";
@@ -25,8 +27,26 @@ export function HomeBanner() {
                         </div>
 
                         <div className="flex flex-row gap-4">
-                            <Button size="lg" className="uppercase">Hire Me <ArrowRightIcon className="size-4" /></Button>
-                            <Button size="lg" className="uppercase">View Projects <ArrowRightIcon className="size-4" /></Button>
+                            <Button size="lg" className="uppercase" asChild>
+                                <Link href="./vinoth-resume.pdf" download>
+                                    Download CV <Download className="size-4" />
+                                </Link>
+                            </Button>
+                            <Button
+                                size="lg"
+                                className="uppercase cursor-pointer"
+                                onClick={() => {
+                                    const target = document.getElementById("projects");
+                                    if (target) {
+                                        const headerOffset = 80;
+                                        const elementPosition = target.getBoundingClientRect().top;
+                                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                                    }
+                                }}
+                            >
+                                View Projects <ArrowRightIcon className="size-4" />
+                            </Button>
                         </div>
                     </div>
 

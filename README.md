@@ -112,7 +112,7 @@ Create a `.env.local` file in the root directory:
 ```env
 # Add your environment variables here
 NEXT_PUBLIC_SITE_URL=https://yoursite.com
-NEXT_PUBLIC_EMAIL=your.email@example.com
+NEXT_PUBLIC_EMAIL=vinoth.dhakshinamurthy@gmail.com
 ```
 
 ### 4. Run Development Server
@@ -262,9 +262,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Vinoth Kumar**
 - 🌐 Website: [vinothkumar.dev](https://vinothkumar.dev)
-- 💼 LinkedIn: [linkedin.com/in/vinothkumar](https://linkedin.com/in/vinothkumar)
+- 💼 LinkedIn: [https://www.linkedin.com/in/vinoth-kumar-150397/](https://https://www.linkedin.com/in/vinoth-kumar-150397/)
 - 🐙 GitHub: [@vinothkumar](https://github.com/vinothkumar)
-- 📧 Email: [your.email@example.com](mailto:your.email@example.com)
+- 📧 Email: [vinoth.dhakshinamurthy@gmail.com](mailto:vinoth.dhakshinamurthy@gmail.com)
 
 ---
 

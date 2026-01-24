@@ -14,7 +14,6 @@ const NAV_LINKS = [
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
 ] as const
 
 export default function Footer() {
@@ -22,7 +21,7 @@ export default function Footer() {
     e.preventDefault()
     const targetId = href.replace('#', '')
     const element = document.getElementById(targetId)
-    
+
     if (element) {
       const headerOffset = 80 // Height of sticky header
       const elementPosition = element.getBoundingClientRect().top
