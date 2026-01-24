@@ -40,7 +40,7 @@ export function TypographyH1({ children, className, color, ...props }: Typograph
   return (
     <h1
       className={cn(
-        "text-[56px] font-bold leading-[1.1] tracking-[-0.02em]",
+        "text-5xl font-bold",
         getColorClass(color),
         className
       )}
@@ -64,7 +64,7 @@ export function TypographyH2({ children, className, color, ...props }: Typograph
   return (
     <h2
       className={cn(
-        "text-[36px] font-bold leading-[1.2]",
+        "text-4xl font-bold",
         getColorClass(color),
         className
       )}
@@ -88,7 +88,7 @@ export function TypographyH3({ children, className, color, ...props }: Typograph
   return (
     <h3
       className={cn(
-        "text-[24px] font-semibold leading-[1.3]",
+        "text-2xl font-semibold",
         getColorClass(color),
         className
       )}
@@ -112,7 +112,7 @@ export function TypographyH4({ children, className, color, ...props }: Typograph
   return (
     <h4
       className={cn(
-        "text-[18px] font-semibold leading-[1.4]",
+        "text-lg font-semibold",
         getColorClass(color),
         className
       )}
@@ -137,7 +137,7 @@ export function TypographyP({ children, className, color = "secondary", ...props
   return (
     <p
       className={cn(
-        "text-[16px] leading-[1.7]",
+        "text-base",
         getColorClass(color),
         className
       )}
@@ -162,7 +162,7 @@ export function TypographySmall({ children, className, color = "muted", ...props
   return (
     <small
       className={cn(
-        "text-[14px] leading-[1.6]",
+        "text-sm",
         getColorClass(color),
         className
       )}
@@ -187,7 +187,7 @@ export function TypographyLabel({ children, className, color, ...props }: Typogr
   return (
     <span
       className={cn(
-        "text-[14px] font-medium tracking-[0.08em] uppercase",
+        "text-sm font-medium uppercase",
         getColorClass(color),
         className
       )}
@@ -221,7 +221,7 @@ export function TypographySectionLabel({ children, className, color = "muted", .
       {...props}
     >
       <span className={cn(
-        "text-[14px] font-semibold tracking-[0.12em] whitespace-nowrap",
+        "text-sm font-semibold whitespace-nowrap",
         getColorClass(color)
       )}>
         {children}

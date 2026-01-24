@@ -53,8 +53,7 @@ export default function Header() {
                     </NavigationMenu>
 
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                        <SheetTitle className="sr-only">Navigation</SheetTitle>
-                        <SheetTrigger asChild>
+                        <SheetTrigger asChild suppressHydrationWarning>
                             <Button variant="ghost" size="icon" className="md:hidden">
                                 <Menu className="h-5 w-5" />
                                 <span className="sr-only">Toggle menu</span>
@@ -62,6 +61,7 @@ export default function Header() {
                         </SheetTrigger>
 
                         <SheetContent side="right">
+                            <SheetTitle className="sr-only">Navigation</SheetTitle>
                             <NavigationMenu className="self-center w-full" orientation="vertical">
                                 <NavigationMenuList className="flex-col gap-4">
                                     {NAV_LINKS.map((link) => (
