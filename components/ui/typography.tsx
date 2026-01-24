@@ -133,7 +133,7 @@ export function TypographyH4({ children, className, color, ...props }: Typograph
  * @example
  * <TypographyP>I'm a passionate developer with experience in...</TypographyP>
  */
-export function TypographyP({ children, className, color = "secondary", ...props }: TypographyProps) {
+export function TypographyP({ children, className, color = "primary", ...props }: TypographyProps) {
   return (
     <p
       className={cn(
@@ -253,5 +253,36 @@ export function TypographyHighlight({ children, className, color = "primary", ..
     >
       {children}
     </span>
+  )
+}
+
+/**
+ * TypographyLabelWithDashes - Label with decorative dashes on both sides
+ * Displays text with em dashes (—) on both sides
+ * 
+ * @example
+ * <TypographyLabelWithDashes>Frontend Developer</TypographyLabelWithDashes>
+ * <TypographyLabelWithDashes color="primary">Full Stack Developer</TypographyLabelWithDashes>
+ */
+interface TypographyLabelWithDashesProps extends Omit<TypographyProps, "children"> {
+  children: React.ReactNode
+  dash?: string
+}
+
+export function TypographyLabelWithDashes({ 
+  children, 
+  className, 
+  color = "muted", 
+  dash = "—",
+  ...props 
+}: TypographyLabelWithDashesProps) {
+  return (
+    <div className={cn("flex items-center gap-3", className)} {...props}>
+      <TypographyLabel color={color}>{dash}</TypographyLabel>
+      <TypographyLabel color={color} className="uppercase">
+        {children}
+      </TypographyLabel>
+      <TypographyLabel color={color}>{dash}</TypographyLabel>
+    </div>
   )
 }

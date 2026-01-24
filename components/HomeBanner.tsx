@@ -1,7 +1,7 @@
 import { ArrowRightIcon, GithubIcon, LinkedinIcon, Mail } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { TypographyH1, TypographyLabel, TypographyP } from "./ui/typography";
+import { TypographyH1, TypographyLabelWithDashes, TypographyP } from "./ui/typography";
 
 export function HomeBanner() {
     return (
@@ -15,14 +15,9 @@ export function HomeBanner() {
                                 Vinoth Kumar
                             </TypographyH1>
 
-                            {/* Frontend Developer with dashes */}
-                            <div className="flex items-center gap-3">
-                                <TypographyLabel color="muted">—</TypographyLabel>
-                                <TypographyLabel color="muted" className="uppercase">
-                                    Frontend Developer
-                                </TypographyLabel>
-                                <TypographyLabel color="muted" className="uppercase">—</TypographyLabel>
-                            </div>
+                            <TypographyLabelWithDashes>
+                                Frontend Developer
+                            </TypographyLabelWithDashes>
 
                             <TypographyP color="primary" className="max-w-xl">
                                 I build modern, user-friendly websites and web applications that help businesses grow and succeed.
