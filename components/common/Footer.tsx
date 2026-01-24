@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t bg-secondary">
       <div className="container mx-auto max-w-7xl px-6 py-3">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center justify-between">
           {/* Left: Copyright */}
           <div>
             <TypographySmall color="muted">
@@ -29,13 +29,13 @@ export default function Footer() {
 
           {/* Right: Navigation */}
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList className="flex-col md:flex-row">
               {NAV_LINKS.map((link) => (
                 <NavigationMenuItem key={link.href}>
                   <NavigationMenuLink asChild>
                     <Link
                       href={link.href}
-                      className="text-[14px] font-normal text-muted-foreground transition-colors hover:text-primary"
+                      className="text-xs md:text-sm font-normal text-muted-foreground transition-colors hover:text-primary"
                     >
                       {link.label}
                     </Link>
