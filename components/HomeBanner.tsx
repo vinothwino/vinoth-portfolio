@@ -5,9 +5,9 @@ import { TypographyH1, TypographyLabel, TypographyP } from "./ui/typography";
 
 export function HomeBanner() {
     return (
-        <div className="bg-background">
-            <div className="container mx-auto max-w-5xl px-6 py-50">
-                <div className="flex flex-row gap-2">
+        <section id="about" className="bg-background">
+            <div className="container mx-auto max-w-5xl px-6 py-20 md:py-40 lg:py-50">
+                <div className="flex flex-col md:flex-row gap-5">
                     <div className="flex flex-col flex-grow gap-6">
 
                         <div className="flex flex-col gap-5">
@@ -35,7 +35,7 @@ export function HomeBanner() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-4 items-start self-center">
+                    <div className="flex flex-row md:flex-col gap-4 items-start md:self-center">
                         <Button variant="link" asChild>
                             <Link href="https://www.linkedin.com/in/vinoth-kumar-150397/" target="_blank" rel="noopener noreferrer">
                                 <LinkedinIcon /> LinkedIn
@@ -54,6 +54,6 @@ export function HomeBanner() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
