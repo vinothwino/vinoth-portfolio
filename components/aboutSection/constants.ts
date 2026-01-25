@@ -2,27 +2,27 @@ import { Feature, Profile } from "./types"
 
 export const FEATURES_LIST: Feature[] = [
     {
-        title: "Passionate",
-        description: "I'm passionate about writing clean code that is minimalistic and efficient."
+        title: "Engineering Mindset",
+        description: "I care about writing clean, predictable code and building UI systems that teams can confidently extend over time."
     },
     {
         title: "Tech Stack",
-        description: "Skilled in React, Next.js, Tailwind CSS, and TypeScript."
+        description: "React, Next.js, TypeScript, Tailwind CSS, and modern frontend tooling focused on performance and scalability."
     },
     {
         title: "Continuous Learning",
-        description: "I Stay Updated with the Latest Trends and Technologies."
+        description: "I stay current with evolving frontend standards, performance techniques, and best practices to deliver future-ready solutions."
     }
 ]
 
-export const MISSION_QUOTE = "Write clean, efficient, and maintainable code that is easy to understand and scale. Create seamless user experiences and bring ideas to life."
+export const MISSION_QUOTE = "My mission is to build frontend systems that are easy to scale, simple to maintain, and enjoyable for both users and developers. I care deeply about code quality, performance, and creating interfaces that feel intuitive and reliable."
 
 
 export const PROFILE_DATA: Profile = {
     name: "Vinoth Kumar",
-    role: "Frontend Developer",
+    role: "Senior Frontend Engineer",
     location: "Chennai",
-    bio: "Based in Chennai. I'm been coding since 2018 and I love turning ideas into beautiful, functional websites.",
+    bio: "Based in Chennai, I’ve been building production-grade frontend applications since 2018, turning complex requirements into clean, user-friendly interfaces.",
     image: {
         src: "/vinoth-kumar.jpg",
         alt: "Vinoth Kumar",

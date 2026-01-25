@@ -12,7 +12,7 @@ type ProfileCardProps = {
 
 export function ProfileCard({ profile }: ProfileCardProps) {
     return (
-        <Card className="shadow-2xl">
+        <Card className="shadow-lg">
             <CardContent>
                 <div className="flex flex-col items-center gap-4 text-center">
                     <Image

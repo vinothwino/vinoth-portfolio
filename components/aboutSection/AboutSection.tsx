@@ -1,4 +1,4 @@
-import { TypographyH2, TypographyH3, TypographyP } from "../ui/typography";
+import { TypographyH2, TypographyP, TypographySmall } from "../ui/typography";
 import { MyMission } from "./MyMission";
 import { FEATURES_LIST, MISSION_QUOTE, PROFILE_DATA } from "./constants";
 import { FeaturesList } from "./FeatureList";
@@ -17,14 +17,15 @@ export default function AboutSection() {
                         <div className="flex flex-col gap-6">
                             {/* Header Section */}
                             <div className="flex flex-col gap-3">
-                                <TypographyH3 color="primary" className="uppercase font-bold">
+                                <TypographySmall color="muted" className="uppercase font-normal opacity-60">
                                     About <span className="text-zinc-400">Me</span>
-                                </TypographyH3>
+                                </TypographySmall>
                                 <TypographyH2 className="uppercase max-w-xl leading-11 font-extrabold">
-                                    Building beautiful user-friendly websites with modern technologies
+                                    BUILDING SCALABLE, HIGH-QUALITY FRONTEND EXPERIENCES
                                 </TypographyH2>
-                                <TypographyP className="max-w-xl leading-7">
-                                    I&apos;m Vinoth Kumar, a frontend developer with a passion for crafting engaging, responsive, and accessible websites that elevate user experiences and drive business success.
+                                <TypographyP className="max-w-xl leading-7 mt-2">
+                                    <span className="block md:inline">I&apos;m Vinoth Kumar, a Senior Frontend Engineer with 7+ years of experience building scalable, user-centric web applications.</span>
+                                    <span className="block md:inline md:ml-1">I focus on performance, accessibility, and clean frontend architecture that supports long-term product growth.</span>
                                 </TypographyP>
                             </div>
 

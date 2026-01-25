@@ -9,8 +9,11 @@ export function ExperienceSection() {
             <div className="flex flex-col gap-7">
                 <div className="flex flex-col gap-1">
                     <TypographyH3>Experience</TypographyH3>
+                    <TypographyP color="primary" className="max-w-3xl">
+                        7+ years of experience delivering scalable, production-grade frontend systems across enterprise and product environments.
+                    </TypographyP>
                     <TypographyP color="muted">
-                        A timeline of my <strong>professional work and impact</strong> as a frontend developer.
+                        A timeline of my professional experience and engineering impact.
                     </TypographyP>
                 </div>
                 <div className="flex flex-col gap-6 max-w-5xl mx-auto">

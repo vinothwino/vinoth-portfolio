@@ -1,4 +1,8 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
 import { TypographyH4, TypographyP, TypographySmall } from "../ui/typography";
 
 export type ExperienceItemProps = {
@@ -20,6 +24,21 @@ export function ExperienceItem({
     tags,
     isLast,
 }: ExperienceItemProps) {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        const checkDesktop = () => {
+            setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
+        };
+        checkDesktop();
+        window.addEventListener("resize", checkDesktop);
+        return () => window.removeEventListener("resize", checkDesktop);
+    }, []);
+
+    const hasMoreBullets = bullets.length > 2;
+    const visibleBullets = isExpanded || !hasMoreBullets || isDesktop ? bullets : bullets.slice(0, 2);
+
     return (
         <div className="grid grid-cols-[96px_1fr] gap-4">
             <div className="relative pl-6 text-xs text-muted-foreground">
@@ -38,10 +57,19 @@ export function ExperienceItem({
                     {meta}
                 </TypographySmall>
                 <ul className="mt-3 list-disc space-y-2 pl-4 text-sm text-muted-foreground">
-                    {bullets.map((bullet) => (
+                    {visibleBullets.map((bullet) => (
                         <li key={bullet}>{bullet}</li>
                     ))}
                 </ul>
+                {hasMoreBullets && !isExpanded && (
+                    <Button
+                        variant="link"
+                        className="md:hidden text-sm mt-2 p-0 h-auto self-start"
+                        onClick={() => setIsExpanded(true)}
+                    >
+                        Show more
+                    </Button>
+                )}
                 {tags && tags.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-2">
                         {tags.map((tag) => (

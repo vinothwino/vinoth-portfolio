@@ -19,6 +19,7 @@ export function ProjectSection() {
                         <ProjectCard
                             key={project.title}
                             title={project.title}
+                            subtitle={project.subtitle}
                             description={project.description}
                             tags={[...project.tags]}
                             typeLabel={project.typeLabel}

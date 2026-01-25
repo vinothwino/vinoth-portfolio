@@ -1,40 +1,38 @@
 export const FRONTEND_SKILLS = [
     "React",
     "Next.js",
-    "Tailwind CSS",
     "TypeScript",
-    "JavaScript",
-    "HTML",
-    "CSS",
-    "React Testing Library",
-    "Jest",
-    "Vitest",
-    "Gsap",
+    "Tailwind CSS",
+    "Testing (Jest, Vitest, RTL)",
+    "GSAP",
 ]
 
 export const BACKEND_SKILLS = [
     "Node.js",
     "Express",
+    "RESTful APIs",
     "MongoDB",
     "MySQL",
-    "Java",
     "Socket.io",
 ]
 
 export const TOOLS_AND_PLATFORMS_SKILLS = [
     "Git",
+    "Github Actions",
     "Cursor",
     "VS Code",
-    "Github Actions"
+    "Eslint",
+    "Prettier",
+    "Netlify"
 ]
 
 export const SKILLS = [{
     title: "Frontend Development",
     data: FRONTEND_SKILLS,
 }, {
-    title: "Backend Development",
+    title: "Backend & APIs",
     data: BACKEND_SKILLS,
 }, {
-    title: "Tools and Platforms",
+    title: "Developer Tools",
     data: TOOLS_AND_PLATFORMS_SKILLS,
 }]
