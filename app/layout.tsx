@@ -11,45 +11,62 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Vinoth Kumar | Frontend Developer",
-  description: "Vinoth Kumar | Frontend Developer",
+  title: "Vinoth Kumar | Senior Frontend Engineer",
+  description:
+    "Senior Frontend Engineer with 7+ years of experience building scalable, high-performance, and production-grade web applications using React, Next.js, and TypeScript.",
+
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
       { url: "/logo.svg", type: "image/svg+xml" },
     ],
-    apple: [
-      { url: "/logo.svg", type: "image/svg+xml" },
-    ],
+    apple: [{ url: "/logo.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.ico",
   },
-  keywords: ["Vinoth Kumar", "Portfolio", "Frontend Developer"],
-  authors: [{ name: "Vinoth", url: "https://vinothkumar.dev" }],
-  creator: "Vinoth",
-  publisher: "Vinoth",
+
+  keywords: [
+    "Vinoth Kumar",
+    "Senior Frontend Engineer",
+    "Frontend Engineer Portfolio",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
+    "Web Performance",
+    "Frontend Architecture",
+  ],
+
+  authors: [{ name: "Vinoth Kumar", url: "https://vinothkumar.dev" }],
+  creator: "Vinoth Kumar",
+  publisher: "Vinoth Kumar",
+
   metadataBase: new URL("https://vinothkumar.dev"),
+
   openGraph: {
-    title: "Vinoth Kumar Portfolio | Frontend Developer",
-    description: "Vinoth Kumar Portfolio | Frontend Developer",
+    title: "Vinoth Kumar | Senior Frontend Engineer",
+    description:
+      "Portfolio of Vinoth Kumar, a Senior Frontend Engineer specializing in scalable frontend systems, performance optimization, and modern web technologies.",
     url: "https://vinothkumar.dev",
     siteName: "Vinoth Kumar Portfolio",
     type: "website",
     images: [
       {
         url: "/vinoth-kumar.webp",
-        alt: "Vinoth Kumar - Frontend Developer",
         width: 1200,
         height: 630,
+        alt: "Vinoth Kumar - Senior Frontend Engineer",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Vinoth Kumar | Frontend Developer",
-    description: "Portfolio showcasing modern web development projects and skills",
+    title: "Vinoth Kumar | Senior Frontend Engineer",
+    description:
+      "Senior Frontend Engineer with 7+ years of experience building scalable, production-grade frontend applications.",
     images: ["/vinoth-kumar.webp"],
   },
 };
+
 
 export default function RootLayout({
   children,
