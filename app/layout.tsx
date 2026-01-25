@@ -14,18 +14,40 @@ export const metadata: Metadata = {
   title: "Vinoth Kumar | Frontend Developer",
   description: "Vinoth Kumar | Frontend Developer",
   icons: {
-    icon: "/logo.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
   },
   keywords: ["Vinoth Kumar", "Portfolio", "Frontend Developer"],
   authors: [{ name: "Vinoth", url: "https://vinothkumar.dev" }],
   creator: "Vinoth",
   publisher: "Vinoth",
+  metadataBase: new URL("https://vinothkumar.dev"),
   openGraph: {
     title: "Vinoth Kumar Portfolio | Frontend Developer",
     description: "Vinoth Kumar Portfolio | Frontend Developer",
     url: "https://vinothkumar.dev",
     siteName: "Vinoth Kumar Portfolio",
-    images: [{ url: "/favicon.ico" }],
+    type: "website",
+    images: [
+      {
+        url: "/vinoth-kumar.webp",
+        alt: "Vinoth Kumar - Frontend Developer",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vinoth Kumar | Frontend Developer",
+    description: "Portfolio showcasing modern web development projects and skills",
+    images: ["/vinoth-kumar.webp"],
   },
 };
 
