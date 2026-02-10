@@ -32,7 +32,7 @@ export function HomeBanner() {
 
                         <div className="flex flex-col md:flex-row gap-4">
                             <Button size="lg" className="capitalize" asChild>
-                                <Link href="./vinoth-resume.pdf" download>
+                                <Link href={process.env.NEXT_PUBLIC_RESUME_URL!}>
                                     Download Resume <Download className="size-4" />
                                 </Link>
                             </Button>

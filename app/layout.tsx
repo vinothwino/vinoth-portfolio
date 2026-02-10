@@ -14,13 +14,15 @@ export const metadata: Metadata = {
   title: "Vinoth Kumar | Senior Frontend Engineer",
   description:
     "Senior Frontend Engineer with 7+ years of experience building scalable, high-performance, and production-grade web applications using React, Next.js, and TypeScript.",
-
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" },
+    ],
+    apple: [
       { url: "/logo.svg", type: "image/svg+xml" },
     ],
-    apple: [{ url: "/logo.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.ico",
   },
 

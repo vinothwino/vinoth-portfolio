@@ -2,14 +2,14 @@
 
 import Link from "next/link"
 import { GithubIcon, LinkedinIcon, Twitter } from "lucide-react"
-import { TypographyH3, TypographyH4, TypographySmall } from "@/components/ui/typography"
+import { TypographyH4, TypographySmall } from "@/components/ui/typography"
 
 const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "./vinoth-resume.pdf", label: "Resume" },
+  { href: process.env.NEXT_PUBLIC_RESUME_URL!, label: "Resume" },
 ] as const
 
 const SOCIAL_LINKS = [
